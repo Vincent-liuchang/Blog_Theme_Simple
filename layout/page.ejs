@@ -1,0 +1,9 @@
+<% if (is_page() && page.type === 'tags') { %>
+    <%- partial('_partial/tags') %>
+<% }else if(is_page() && page.type === 'categories'){%>
+    <%- partial('_partial/categories') %>
+    <% }else if(is_page() && page.type === 'about'){%>
+        <%- partial('_partial/about') %>
+<% }else{%>
+    <%- partial('_partial/post') %>
+<% } %>

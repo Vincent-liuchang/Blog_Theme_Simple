@@ -1,0 +1,69 @@
+header {
+  padding: 2em 0;
+  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+
+  .show{
+      margin-top: 0px;
+  }
+
+  .topBar {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  transition: 0.8s;
+  }
+
+  .blog-title .beer{
+    margin-left:30px
+    &:hover +.rabbit {
+      visibility:visible;
+    }
+  }
+
+  .blog-title .rabbit{
+    visibility:hidden;
+    margin-left:-10px;
+  }
+
+  .blog-title span{
+    margin-left:20px
+    display: block;
+  }
+
+  .blog-title .logo {
+    color: #000000;
+    padding: 2px
+    margin-left: 5px
+    font-size: 2em;
+    font-family: "San Francisco",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+  .menu {
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      display: inline-block;
+      margin-right: 10px;
+      font-family: "San Francisco",Helvetica,Arial,serif;
+    }
+
+    .menu-item-link {
+      color: #000000;
+      font-weight: lighter;
+      text-decoration: none;
+
+      &:hover {
+        color: #006600;
+      }
+    }
+  }
+}

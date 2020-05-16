@@ -1,0 +1,35 @@
+<post-meta>
+    <span class="post-time"><%- date(post.date, "DD-MM-YYYY") %></span>
+
+    <span class="post-meta-item post-meta-categories">
+        /
+        <% if(post.categories && post.categories.length) {%>
+        <%- list_categories(post.categories, {
+          show_count: false,
+          separator: ', ',
+          style: '',
+          transform(str) {
+            return str.toUpperCase();
+          }
+        }) %>
+        <%}else{%>
+        UNCATE
+        <%}%>
+    </span>
+
+    <span class="post-meta-item post-meta-tags">
+        /
+        <% if(post.tags && post.tags.length) {%>
+        <%- list_tags(post.tags, {
+          show_count: false,
+          separator: ', ',
+          style: '',
+          transform(str) {
+            return "#"+str.toUpperCase();
+          }
+        }) %>
+        <%}else{%>
+        UNTAG
+        <%}%>
+    </span>
+</post-meta>

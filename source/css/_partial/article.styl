@@ -1,0 +1,98 @@
+.posts  {
+  margin-top: 5%;
+  flex: 66.67%;
+  .post:first-child {
+    margin-top: 0;
+  }
+  }
+
+.postBox{
+  margin-top: 5%;
+  flex: 66.67%;
+}
+
+.post {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left:20px;
+  flex-wrap: wrap;
+  font-family: "San Francisco",Helvetica,Arial,sans-serif;
+  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+
+  .post-title {
+    font-size: 1.5em;
+    .post-title-link {
+      color: #000000;
+      text-decoration: none;
+      transition: 0.8s;
+      &:hover {
+        color: #006600;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post-meta {
+    font-size: .5em;
+    color: rgb(110, 110, 110);
+
+    .category-link{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    &:hover {
+      color: #006600;
+      text-decoration: underline;
+    }
+    }
+
+    .tag-link{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    &:hover {
+      color: #006600;
+      text-decoration: underline;
+    }
+    }
+  }
+
+  .post-excerpt {
+    margin-top: 0;
+    font-size: .5em;
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+  }
+
+  .post-content {
+    font-size: .8em;
+
+    code:not(.hljs){
+      padding 2px;
+      border-radius: 5px;
+      background-color: rgb(238, 238, 238, 0.5);
+    }
+
+    a {
+      color: #006600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    h1 {
+      &:hover {
+      &:before{
+      content: '#';
+      }
+      }
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    h3 {
+      font-size: 1em;
+    }
+  }
+}

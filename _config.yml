@@ -1,0 +1,11 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+
+topTerminal: false
+
+# Widgets List
+widgets:
+  tagCloud: True
+  cateList: True

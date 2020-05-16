@@ -1,0 +1,19 @@
+<div class="container">
+  <section class="posts">
+    <div class="archive-title"><%-page.tag%></div>
+    <div>
+      <span class="archive-number">该标签共计 <%- page.posts.length %> 篇文章</span>
+    </div>
+      <% page.posts.each(function (post) { %>
+        <article class="post">
+        <div class="post-title">
+          <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </div>
+        <div class="post-meta">
+          <%- partial('_partial/post-meta',{post:post}) %>
+        </div>
+      </article>
+      <% }) %>
+  </section>
+  <%- partial('_partial/paginator') %>
+</div>

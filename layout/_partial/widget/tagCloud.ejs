@@ -1,0 +1,10 @@
+<% if (theme.widgets.tagCloud && site.tags.length){ %>
+    <div class="tagcloud">
+        <div class="title">标签云</div>
+        <div class="content">
+          <div class="tag-link">
+            <%- tagcloud({order:1}) %>
+        </div>
+        </div>
+    </div>
+<% } %>

@@ -1,0 +1,32 @@
+<div class="container">
+  <section class="posts">
+    <div class="archive-title"><%-page.category%></div>
+    <div>
+      <span class="archive-number">该分类共计 <%- page.posts.length %> 篇文章</span>
+    </div>
+      <% page.posts.each(function (post) { %>
+        <article class="post">
+        <div class="post-title">
+          <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </div>
+        <div class="post-meta">
+            <span class="post-time"><%- date(post.date, "DD-MM") %></span>
+            <span class="post-meta-item post-meta-tags">
+                /
+                <% if(post.tags && post.tags.length) {%>
+                <%- list_tags(post.tags, {
+                  show_count: false,
+                  separator: ', ',
+                  style: '',
+                  transform(str) {
+                    return "#"+str.toUpperCase();
+                  }
+                }) %>
+                <%}%>
+            </span>
+        </div>
+      </article>
+      <% }) %>
+  </section>
+  <%- partial('_partial/paginator') %>
+</div>
